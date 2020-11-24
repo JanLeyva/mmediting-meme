@@ -51,6 +51,7 @@ def parse_dir_args():
 
 def main_dir():
     args = parse_dir_args()
+    os.makedirs(args.save_dir, exist_ok=True)
 
     model = init_model(
         args.config, args.checkpoint, device=torch.device('cuda', args.device))

@@ -14,9 +14,10 @@ RUN apt-get update && apt-get install -y git ninja-build libglib2.0-0 libsm6 lib
 
 # Install mmediting
 RUN conda clean --all
-RUN git clone https://github.com/open-mmlab/mmediting.git /mmediting
+RUN git clone https://github.com/HimariO/mmediting.git /mmediting
 WORKDIR /mmediting
 ENV FORCE_CUDA="1"
-RUN pip install mmcv-full==latest+torch1.6.0+cu101 -f https://download.openmmlab.com/mmcv/dist/index.html
+RUN pip install mmcv-full==1.1.1+torch1.6.0+cu101 -f https://download.openmmlab.com/mmcv/dist/index.html
 RUN pip install cython --no-cache-dir
 RUN pip install --no-cache-dir -e .
+RUN apt update && apt install -y libgl1-mesa-glx
