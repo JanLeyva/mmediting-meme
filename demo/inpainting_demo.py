@@ -67,7 +67,8 @@ def main_dir():
         else:
             img_map[imgid] = path
 
-    for imgid in img_map.keys():
+    for i, imgid in enumerate(img_map.keys()):
+        print(f"[{i}/{len(img_map)}] {imgid}")
         masked_img_path = img_map[imgid]
         mask_path = mask_map[imgid]
         img_name = os.path.basename(masked_img_path)
@@ -84,5 +85,7 @@ def main_dir():
 
 
 if __name__ == '__main__':
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
     # main()
     main_dir()
