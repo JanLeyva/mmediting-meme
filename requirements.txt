@@ -1,2 +1,4 @@
 -r requirements/runtime.txt
 -r requirements/tests.txt
+-r requirements/detect_extract.txt
+

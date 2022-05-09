@@ -1,0 +1,3 @@
+easyocr
+fire
+mmcv-full==1.1

@@ -9,6 +9,17 @@
 [![codecov](https://codecov.io/gh/open-mmlab/mmediting/branch/master/graph/badge.svg)](https://codecov.io/gh/open-mmlab/mmediting)
 [![license](https://img.shields.io/github/license/open-mmlab/mmediting.svg)](https://github.com/open-mmlab/mmediting/blob/master/LICENSE)
 
+## Adjust for HM dataset
+
+This fork is based in the `HimariO` solution for the Hateful memes competition by Facebook. The main idea of this repository is clear (inpainting) the meme dataset from text. This will be done in 4 steps:
+
+1. Detect text via OCR.
+2. Put boxes coordenates where the text was detected.
+3. Generate mask where the text was detected.
+4. Inpainting the zone that where the mask.
+
+You could see how to reproduce the result in the following [notebook](https://colab.research.google.com/drive/1XBiNhKOV4uv532swUWaXcT_VatU7qGl2#scrollTo=Z7qV3YHGyPqj)
+
 ## Introduction
 
 MMEditing is an open source image and video editing toolbox based on PyTorch. It is a part of the [OpenMMLab](https://open-mmlab.github.io/) project.
